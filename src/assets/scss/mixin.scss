@@ -1,0 +1,23 @@
+/*
+*$hov:          左右对齐父容器的开始和结束，中间平均分布，产生相同的间距
+*$col:          设置在侧轴方向上居中对齐
+*/
+@mixin flex($hov:space-between,$col:center){
+    display: flex;
+    justify-content: $hov;
+    align-items:center;
+}
+
+/*
+*$w：           宽度
+*$h:            高度
+*$img           图片
+*$size          尺寸大小
+*/
+@mixin bgImg($w:0,$h:0,$img:'',$size:contain){
+    display: inline-block;
+    width: $w;
+    height: $h;
+    background:url($img) no-repeat center;
+    background-size: $size;
+}
