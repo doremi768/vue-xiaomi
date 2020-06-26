@@ -81,7 +81,6 @@ export default {
         getProductList(){
              this.axios.get('/products').then((res) => {
                 this.phoneList = res.list;
-                console.log(this.phoneList)
              });
         },
         goToCart(){
@@ -115,6 +114,7 @@ export default {
                 background-color: #FF6600;
                 text-align: center;
                 color: #ffffff;
+                 margin-right: 0;
                 .icon-cart{
                     @include bgImg(32px,16px,'/imgs/icon-cart-checked.png');
                     margin-right: 4px;

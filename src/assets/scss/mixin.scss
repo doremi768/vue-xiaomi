@@ -1,4 +1,5 @@
 /*
+*flex布局
 *$hov:          左右对齐父容器的开始和结束，中间平均分布，产生相同的间距
 *$col:          设置在侧轴方向上居中对齐
 */
@@ -20,4 +21,38 @@
     height: $h;
     background:url($img) no-repeat center;
     background-size: $size;
+}
+
+
+/*
+*弹窗设置
+*$pos:          定位
+*$top：         上边距
+*$left:         左边距
+*$w:            弹窗宽度
+*$h:            弹窗高度
+*/
+@mixin position($pos:absolute,$top:0,$left:0,$w:100%,$h:100%){
+    position: $pos;
+    top: $top;
+    left: $left;
+    width: $w;
+    height: $h;
+}
+
+/*
+*弹窗的x按钮
+*$w：           宽度
+*$h:            高度
+*$img           图片
+*$size          尺寸大小
+*/
+@mixin positionImg($pos:absolute,$w:0,$h:0,$top:0,$right:0,$img:''){
+    position: $pos;
+    width: $w;
+    height: $h;
+    top: $top;
+    right: $right;
+    background:url($img) no-repeat center;
+    background-size: contain;
 }
